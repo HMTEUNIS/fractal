@@ -1,38 +1,73 @@
-.App {
+#main_cont {
   text-align: center;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+  
+}
+@font-face {
+  font-family: 'fira';
+  src: local('fira'),
+       url('./Fonts/fire.ttf') format('ttf'),
+}
+#top_bar{
+margin-bottom: 5px;
+align-content: center;
+width: 90%;
+left:5%;
+position: relative;
+}
+.old_logo_comp{
+  width:14%;
+  height: auto;
+  margin-bottom: -25px;
+  position: relative;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+
+
+#page_title {
+font-weight: 600;
+background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#top_nav span{
+font-weight: bold;
+padding: 5px;
+margin: 10px;
+cursor: pointer;
+}
+#page_title span{
+  font-size: 60px;
+  position: relative;
+  z-index: 2;
+}
+#content_container{
+width: 90%;
+position: relative;
+margin: auto;
+background: rgba(7, 136, 35, 0.521);
+z-index: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  -webkit-text-stroke: 1px rgb(240, 239, 239);  text-decoration: none;
+  margin-bottom: 2px;
+  color: black;
 }
-
-.App-link {
-  color: #61dafb;
+a:hover {
+   color: rgba(7, 136, 35, 0.445)
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+#top_nav a.active {
+  color: rgb(7, 136, 35);
+  border: 1px solid rgb(7, 136, 35);
+ }
