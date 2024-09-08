@@ -3,26 +3,42 @@
   z-index: 1;
   font-size: 15px;
   height: 100%;
-  
+  font-family: 'fira';
+
 }
+#apply_to_teach button{
+cursor: pointer;
+height: 50px;
+width: 50px;
+
+}
+
+
 #god{
-  background: linear-gradient(#f5b6b6ad, #b9bef5a2);
-  height: 300vh
+  background: linear-gradient(#fae2e2ad, #ced0f0a2);
+  height: 400vh
+}
+footer{
+  position: relative;
+  bottom: 50px;
+  right: -60%;
 }
 @font-face {
   font-family: 'fira';
-  src: local('fira'),
-       url(./Fonts/fire.ttf) format('ttf'),
+  src: local('fire'),
+       url(./Fonts/fire.ttf) format('truetype'),
 }
 @font-face {
   font-family: 'paint';
-  src: local('paint'),
-       url(./Fonts/fingerpaint.ttf) format('ttf'),
+  src: local('fingerpaint'),
+       url(./Fonts/fingerpaint.ttf) format('truetype'),
 }
 
 label{
   font-size: large;  padding: 5px;
   font-weight: 400;
+  display: inline-block;
+  float: left;
 }
 
 #long_form_resp label{
@@ -50,7 +66,6 @@ textarea{
 #top_bar{
 margin-bottom: 5px;
 align-content: center;
-font-family: 'paint';
 
 width: 90%;
 left:5%;
@@ -65,13 +80,52 @@ position: relative;
 }
 
 
+@media (min-width: 769px) {
+  #home_page{
+
+    font-family: 'fira';
+    font-weight: 900;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/a8818631055505.563f6e1be5aa3.gif);
+      background-size: cover;
+      color: transparent;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      font-size: 40px;
+  }
+
+#top_nav a{
+  font-size: 40px!important;
+}
+
+}
+@media (max-width: 768px) {
+  #home_page{
+    font-family: 'fira';
+    font-weight: 900;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/a8818631055505.563f6e1be5aa3.gif);
+      background-size: cover;
+      color: transparent;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      font-size: 20px
+  }
 
 
+  #top_nav{
+    text-align: center;
+  }
+}
 
+
+#basic_info{
+  display: grid;
+  width: 20%;
+}
 
 #page_title {
   font-weight: 600;
-  background-image: url(https://www.grandcoastcapital.com/wp-content/uploads/2016/11/amazing-ocean-waves-breaking-nature-animated-gif.gif);
     background-size: cover;
     color: transparent;
     -moz-background-clip: text;
@@ -99,27 +153,14 @@ font-family: 'fira';
 font-weight: 500;
 
 }
-#home_page{
-
-  font-family: 'fira';
-  font-weight: 900;
-  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/a8818631055505.563f6e1be5aa3.gif);
-    background-size: cover;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    text-transform: uppercase;
-    font-size: 30px;
-}
-
 #home_page span{
   display: inline-block;
 }
 a {
   -webkit-text-stroke: 1px rgb(240, 239, 239);  text-decoration: none;
   margin-bottom: 2px;
-  color: rgb(230, 158, 24);
-  font-size: 25px;
+  color: rgb(0, 150, 125);
+  font-size: 20px;
   text-shadow: 1px 1px;
 }
 a:hover {

@@ -5,39 +5,44 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 import {useState, useCallback, useEffect} from 'react'
 import Typewriter from 'typewriter-effect';
 import React from 'react';
-function Home(){
-  const [typewrite, setType] = useState({index: 0, line: 0, text: ""})
+import Part from './Part.tsx';
+function Home({i, setI}){
+  useEffect(() => { 
+setI(i+1)    
+  }, [])
+    
 
-
-
+console.log("i",i)
   return(
     <div id="home_page">
 
       <div>
+        { i > 1
+        
+        
+        ?
+      <span>
+<span>FRACTAL is a dream of worldmaking through ongoing processes of joyful learning,</span>
+<span>a pluripotent seed for queer and liberatory futures,</span>
+<span>a portal for summoning desirable worlds.</span>
+<br/>
+<br/>
+<br/>
+<span>Want to come play with us?</span>
+      </span>
+      
+      
 
-{/* <Typewriter
-  options={{
-    strings: ['FRACTAL is a dream of worldmaking through ongoing processes of joyful learning,' ,
-      'a radical non-hierarchical collective study convergence for experimenting towards thriving futures,'
-      ,
-      'a pluripotent seed for queer and liberatory futures, a portal for summoning desirable worlds.' 
-      ,
-      'We’re gathering in Tovaangar (so called Los Angeles)from Nov 22-25th,'
-      ,
-      'and weaving together constellations of our beloved and brilliant friends,'
-      ,
-      'at the leading edges, in the shadowy undergrounds, fugitive cracks, and entangled middles, of art, ecology and technology, for a moment of shared inquiry, cocreation, nourishment and to stir up good trouble.'
-      ,
-      'Want to come play with us?'
-      ],
-    autoStart: true,
-    loop: true,
-
-  }}
-/> */}
-
-
+      
+      
+      
+      
+      :
 <Typewriter
+options={{
+loop: false,
+delay: 40
+}}
   onInit={(typewriter) => {
     typewriter
     .typeString('FRACTAL is a dream of worldmaking through ongoing processes of joyful learning,')
@@ -45,32 +50,14 @@ function Home(){
       .typeString('<br/> a pluripotent seed for queer and liberatory futures,')
       .pauseFor(250)
       .typeString('<br/> a portal for summoning desirable worlds.')
-      
-      .pauseFor(250)
-      .typeString('<br/> We’re gathering in Tovaangar (so called Los Angeles)from Nov 22-25th,')
-      .pauseFor(250)
-      .typeString('<br/> and weaving together constellations of our beloved and brilliant friends,')
-      .pauseFor(250)
-      .typeString('<br/> at the leading edges,')
-      .pauseFor(150)
-      .typeString('<br/> in the shadowy undergrounds,')
-      .pauseFor(150)
-      .typeString('<br/>  fugitive cracks,')
-      .pauseFor(150)
-      .typeString('<br/>  and entangled middles,')
-      .pauseFor(150)
-      .typeString('<br/>  of art, ecology and technology,')
-      .pauseFor(150)
-      .typeString('<br/>   for a moment of shared inquiry, cocreation, nourishment and to stir up good trouble.')
-      .pauseFor(250)
-      .typeString('<br/>   Want to come play with us?')
+      .typeString('<br/> <br/> <br/> Want to come play with us?')
       
       
       .start();
   }}
 />
 
-
+}
 
 
       </div>
@@ -100,35 +87,35 @@ We are seeking proposals from facilitators interested in joining us in our endev
 
       </div>
       <div> 
-        <form onSubmit={handleSubmit}> 
+        <form id='apply_to_teach' onSubmit={handleSubmit}> 
            <div id='basic_info'>
         <label>Name: </label>
-      
+    
       <input type="text" name="name" required />
-      {errors.name && <div className="error">{errors.name}</div>}
+      {errors.name && <div classname="error">{errors.name}</div>}
 
       <label>Email: </label>
       <input type="text" name="email" required />
-      {errors.email && <div className="error">{errors.email}</div>}
+      {errors.email && <div classname="error">{errors.email}</div>}
 
       <label>Phone: </label>
       <input type="text" name="phone" required />
       {errors.phone && <div className="error">{errors.phone}</div>}
 </div>
 <div id='long_form_resp'>
-      <label>Any internet links / portfolio / website / social media of your previous work you’d like to share? S</label>
+      <label>Any internet links / portfolio / website / social media of your previous work you’d like to share?</label>
       <input placeholder="It's okay if not :)"name="web"  />
       {errors.web && <div className="error">{errors.web}</div>}
 <br />
 
       <label>Facilitator Bio: </label>
      
-      <textarea type="text" class='long_form'name="bio" placeholder='Feel free to add any information you’d like shared about yourself relevant to your container offering or favorite fruit.' />
+      <textarea type="text" className='long_form'name="bio" placeholder='Feel free to add any information you’d like shared about yourself relevant to your container offering or favorite fruit.' />
       {errors.web && <div className="error">{errors.web}</div>}
       <br />
 
       <label>Container Title + Summary</label>
-      <textarea type="text" class='long_form' placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"name="title" required />
+      <textarea type="text" classNam='long_form' placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"name="title" required />
       {errors.title && <div className="error">{errors.title}</div>}
       <br />
 
@@ -195,14 +182,21 @@ function News(){
   console.log("beep")
 
   return(
-    <div>Hang Tight!</div>
+    <div>Hang Tight! im thinking here can be announcments, video flyers, sign up for mailing list type stuff?</div>
   )
 }
+function Register(){
 
+
+  return(
+    <div>another form here for registering and logistical stuff</div>
+  )
+}
   function App() {
-   
+   const [i, setI] =useState(0)
     return (
       <div id='god'>
+        <Part />
       <div id="main_cont">
 <Router>
         <div id='top_bar'>
@@ -222,25 +216,27 @@ function News(){
         
        <NavLink to='/'> <span>About</span> </NavLink >
        <NavLink to='/news'> <span>News</span></NavLink>
-       <NavLink to='/register'> <span>Register</span></NavLink>
+       <NavLink to='/register'> <span>Logistics</span></NavLink>
 
-      <NavLink to='/submit_class'> <span>Submit</span></NavLink>
+      <NavLink to='/submit_class'> <span>Apply</span></NavLink>
         </div>
-
         </div>
    
    <div id='content_container'>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home i={i} setI={setI}/>} />
           <Route path="/news" element={<News />} />
 
           <Route path="/submit_class" element={<SubmitClass />} />
+          <Route path="/register" element={<Register />} />
 
         </Routes>
+
       </div>   
       </Router>
 
       </div>
+
       </div>
     );
   }
