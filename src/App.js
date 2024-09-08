@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import {useState, useCallback, useEffect} from 'react'
+import { HashRouter , Routes, Route, NavLink } from 'react-router-dom';
+import {useState, useRef, useEffect} from 'react'
 import Typewriter from 'typewriter-effect';
 import React from 'react';
 import Part from './Part.tsx';
+import emailjs from '@emailjs/browser';
 function Home({i, setI}){
   useEffect(() => { 
 setI(i+1)    
@@ -56,22 +57,61 @@ delay: 40
       .start();
   }}
 />
-
 }
-
-
       </div>
-
-
-
         </div>
   )
 }
 
 
 function SubmitClass(){
-const handleSubmit = () =>{
-  console.log('here')
+const handleSubmit = (e) =>{
+
+  e.preventDefault()
+
+const tempPerms ={
+  fac : {
+    name: "",
+    email: "",
+    phone: "",
+    bio: "",
+    accomidations: "",
+    staying: "",
+    links: "",
+    likes: "",
+    ect: ""
+  },
+  cont : {
+    title: "",
+    type: "",
+    takeaway: "",
+    needs: "",
+    location: "",
+    time: "",
+    size: ""
+  }
+}
+
+  
+  
+  const formData = Array.from(e.target)
+  formData.forEach((input) =>{
+    if (tempPerms.fac[input.name] === ""){
+      tempPerms.fac[input.name] = input.value
+    }else{
+      tempPerms.cont[input.name] = input.value
+    }
+
+    emailjs
+    .send('service_tfem7t5', 'template_jnj7u3m', tempPerms, {publicKey : 'AHBkhOErAFk4Ao6F_', limitRate:{throttle: 0}}).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
+  })
 }
 const errors = {
   name : console.log("name eerror") 
@@ -87,7 +127,7 @@ We are seeking proposals from facilitators interested in joining us in our endev
 
       </div>
       <div> 
-        <form id='apply_to_teach' onSubmit={handleSubmit}> 
+        <form id='apply_to_teach'  onSubmit={handleSubmit}> 
            <div id='basic_info'>
         <label>Name: </label>
     
@@ -114,8 +154,23 @@ We are seeking proposals from facilitators interested in joining us in our endev
       {errors.web && <div className="error">{errors.web}</div>}
       <br />
 
+      <label>Any community support needs?</label>
+      <textarea type="text" class='long_form' placeholder="Accommodations? Dietary restrictions? Allergies? Medical and Access support?"name="accomidations"  />
+      {errors.accomidations && <div className="error">{errors.accomidations}</div>}
+
+
+      <label>What are some aspects of group gatherings that sparked inspiration and excitement for you that you would like to see integrated?</label>
+      <textarea type="text" class='long_form' placeholder="Bulletin board for spontaneous activities, collective cooking and meal sharing, evening programming, community radio, secret message mailboxes etc."name="likes"  />
+      {errors.likes && <div className="error">{errors.likes}</div>}
+      
+      <label>Any thing else you'd like to share?</label>
+      <textarea type="text" class='long_form' name="ect" />
+      {errors.ect && <div className="error">{errors.ect}</div>}
+
+
+
       <label>Container Title + Summary</label>
-      <textarea type="text" classNam='long_form' placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"name="title" required />
+      <textarea type="text" className='long_form' placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"name="title" required />
       {errors.title && <div className="error">{errors.title}</div>}
       <br />
 
@@ -143,7 +198,7 @@ We are seeking proposals from facilitators interested in joining us in our endev
       <input type="text" placeholder="We will organize daily programming based on facilitator submissions, but expect to have multiple activities occurring throughout each day "name="time" required />
       {errors.time && <div className="error">{errors.time}</div>}
 
-      <label>s your container scalable for groups of different sizes? Is there an ideal group size or any size parameters?</label>
+      <label>Is your container scalable for groups of different sizes? Is there an ideal group size or any size parameters?</label>
       <textarea type="text" class='long_form' placeholder="how many people we talking here?"name="size" required />
       {errors.size && <div className="error">{errors.size}</div>}
 
@@ -153,18 +208,6 @@ We are seeking proposals from facilitators interested in joining us in our endev
       {errors.staying && <div className="error">{errors.staying}</div>}
 
 
-      <label>Any community support needs?</label>
-      <textarea type="text" class='long_form' placeholder="Accommodations? Dietary restrictions? Allergies? Medical and Access support?"name="accomidations"  />
-      {errors.accomidations && <div className="error">{errors.accomidations}</div>}
-
-
-      <label>What are some aspects of group gatherings that sparked inspiration and excitement for you that you would like to see integrated?</label>
-      <textarea type="text" class='long_form' placeholder="Bulletin board for spontaneous activities, collective cooking and meal sharing, evening programming, community radio, secret message mailboxes etc."name="likes"  />
-      {errors.likes && <div className="error">{errors.likes}</div>}
-      
-      <label>Any thing else you'd like to share?</label>
-      <textarea type="text" class='long_form' name="ect" />
-      {errors.ect && <div className="error">{errors.ect}</div>}
 </div>
           <button type='submit'>send it</button>
         </form>
@@ -198,8 +241,9 @@ function Register(){
       <div id='god'>
         <Part />
       <div id="main_cont">
-<Router>
-        <div id='top_bar'>
+      <HashRouter basename="/">   
+      
+           <div id='top_bar'>
           <span id='page_title'>
 
           <img className='old_logo_comp'src='https://media2.giphy.com/media/fwnnWvYviPiKt6ntai/giphy.gif' />
@@ -214,7 +258,7 @@ function Register(){
 </span>
         <div id="top_nav">
         
-       <NavLink to='/'> <span>About</span> </NavLink >
+       <NavLink to='*'> <span>About</span> </NavLink >
        <NavLink to='/news'> <span>News</span></NavLink>
        <NavLink to='/register'> <span>Logistics</span></NavLink>
 
@@ -224,16 +268,16 @@ function Register(){
    
    <div id='content_container'>
         <Routes>
-          <Route path="/" element={<Home i={i} setI={setI}/>} />
+        <Route path="/" >
+          <Route index path="*" element={<Home i={i} setI={setI}/>} />
           <Route path="/news" element={<News />} />
-
           <Route path="/submit_class" element={<SubmitClass />} />
           <Route path="/register" element={<Register />} />
-
+          </Route>
         </Routes>
 
       </div>   
-      </Router>
+      </HashRouter>
 
       </div>
 

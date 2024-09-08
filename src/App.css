@@ -4,19 +4,23 @@
   font-size: 15px;
   height: 100%;
   font-family: 'fira';
+  margin-top: 10px;
 
 }
 #apply_to_teach button{
-cursor: pointer;
-height: 50px;
-width: 50px;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  background: aquamarine;
+  font-size: larger;
 
 }
 
 
 #god{
   background: linear-gradient(#fae2e2ad, #ced0f0a2);
-  height: 400vh
+  height: 400vh;
+  margin-top: -10px;
 }
 footer{
   position: relative;
