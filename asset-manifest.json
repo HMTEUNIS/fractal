@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/fractal/static/css/main.a51ada30.css",
-    "main.js": "/fractal/static/js/main.bd887738.js",
+    "main.js": "/fractal/static/js/main.7c6e1c8a.js",
     "static/js/453.d9055aaa.chunk.js": "/fractal/static/js/453.d9055aaa.chunk.js",
     "static/media/fire.ttf": "/fractal/static/media/fire.195a5963e89a1ff0cf03.ttf",
     "static/media/fingerpaint.ttf": "/fractal/static/media/fingerpaint.3c3a9cdbff527a1cdb37.ttf",
     "static/media/logo.svg": "/fractal/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/fractal/index.html",
     "main.a51ada30.css.map": "/fractal/static/css/main.a51ada30.css.map",
-    "main.bd887738.js.map": "/fractal/static/js/main.bd887738.js.map",
+    "main.7c6e1c8a.js.map": "/fractal/static/js/main.7c6e1c8a.js.map",
     "453.d9055aaa.chunk.js.map": "/fractal/static/js/453.d9055aaa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a51ada30.css",
-    "static/js/main.bd887738.js"
+    "static/js/main.7c6e1c8a.js"
   ]
 }
