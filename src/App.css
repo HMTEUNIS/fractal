@@ -1,18 +1,57 @@
 #main_cont {
-  text-align: center;
-  align-content: center;
-  position: relative;
+  text-align: justify;
   z-index: 1;
+  font-size: 15px;
+  height: 100%;
   
+}
+#god{
+  background: linear-gradient(#f5b6b6ad, #b9bef5a2);
+  height: 300vh
 }
 @font-face {
   font-family: 'fira';
   src: local('fira'),
-       url('./Fonts/fire.ttf') format('ttf'),
+       url(./Fonts/fire.ttf) format('ttf'),
 }
+@font-face {
+  font-family: 'paint';
+  src: local('paint'),
+       url(./Fonts/fingerpaint.ttf) format('ttf'),
+}
+
+label{
+  font-size: large;  padding: 5px;
+  font-weight: 400;
+}
+
+#long_form_resp label{
+  padding: 5px;
+  text-align: unset;
+  display: block;
+}
+#long_form_resp{
+  display: block;
+  float: left;
+  padding: 5px;
+}
+#long_form_resp input{
+  width: 98%
+}
+.long_form{
+  width: 98%;
+  position: relative;
+}
+textarea{
+  resize: none;
+  height: 80px;
+}
+
 #top_bar{
 margin-bottom: 5px;
 align-content: center;
+font-family: 'paint';
+
 width: 90%;
 left:5%;
 position: relative;
@@ -31,19 +70,19 @@ position: relative;
 
 
 #page_title {
-font-weight: 600;
-background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
-  background-size: cover;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
+  font-weight: 600;
+  background-image: url(https://www.grandcoastcapital.com/wp-content/uploads/2016/11/amazing-ocean-waves-breaking-nature-animated-gif.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
 }
 
 #top_nav span{
 font-weight: bold;
 padding: 5px;
-margin: 10px;
+margin: 1px;
 cursor: pointer;
 }
 #page_title span{
@@ -55,19 +94,38 @@ cursor: pointer;
 width: 90%;
 position: relative;
 margin: auto;
-background: rgba(7, 136, 35, 0.521);
 z-index: 2;
+font-family: 'fira';
+font-weight: 500;
+
+}
+#home_page{
+
+  font-family: 'fira';
+  font-weight: 900;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/a8818631055505.563f6e1be5aa3.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 30px;
 }
 
+#home_page span{
+  display: inline-block;
+}
 a {
   -webkit-text-stroke: 1px rgb(240, 239, 239);  text-decoration: none;
   margin-bottom: 2px;
-  color: black;
+  color: rgb(230, 158, 24);
+  font-size: 25px;
+  text-shadow: 1px 1px;
 }
 a:hover {
-   color: rgba(7, 136, 35, 0.445)
+   color: rgba(230, 17, 141, 0.445)
 }
 #top_nav a.active {
-  color: rgb(7, 136, 35);
-  border: 1px solid rgb(7, 136, 35);
+  color: rgba(230, 17, 141, 0.445);
+  border: 1px solid rgba(230, 17, 141, 0.445)
  }
