@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/fractal/static/css/main.9295888c.css",
-    "main.js": "/fractal/static/js/main.6ff39be1.js",
-    "static/js/453.d9055aaa.chunk.js": "/fractal/static/js/453.d9055aaa.chunk.js",
-    "static/media/fire.ttf": "/fractal/static/media/fire.195a5963e89a1ff0cf03.ttf",
-    "static/media/fingerpaint.ttf": "/fractal/static/media/fingerpaint.3c3a9cdbff527a1cdb37.ttf",
-    "static/media/logo.svg": "/fractal/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/fractal/index.html",
-    "main.9295888c.css.map": "/fractal/static/css/main.9295888c.css.map",
-    "main.6ff39be1.js.map": "/fractal/static/js/main.6ff39be1.js.map",
-    "453.d9055aaa.chunk.js.map": "/fractal/static/js/453.d9055aaa.chunk.js.map"
+    "main.css": "/www.fractal.school/static/css/main.cf8ad25a.css",
+    "main.js": "/www.fractal.school/static/js/main.60e8a7dc.js",
+    "static/js/453.d9055aaa.chunk.js": "/www.fractal.school/static/js/453.d9055aaa.chunk.js",
+    "static/media/fire.ttf": "/www.fractal.school/static/media/fire.195a5963e89a1ff0cf03.ttf",
+    "static/media/fingerpaint.ttf": "/www.fractal.school/static/media/fingerpaint.3c3a9cdbff527a1cdb37.ttf",
+    "static/media/logo.svg": "/www.fractal.school/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/www.fractal.school/index.html",
+    "main.cf8ad25a.css.map": "/www.fractal.school/static/css/main.cf8ad25a.css.map",
+    "main.60e8a7dc.js.map": "/www.fractal.school/static/js/main.60e8a7dc.js.map",
+    "453.d9055aaa.chunk.js.map": "/www.fractal.school/static/js/453.d9055aaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9295888c.css",
-    "static/js/main.6ff39be1.js"
+    "static/css/main.cf8ad25a.css",
+    "static/js/main.60e8a7dc.js"
   ]
 }
