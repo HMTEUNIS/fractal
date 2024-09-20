@@ -74,7 +74,74 @@ name="email"
  name="phone"
    />
 </div>
+
+<label>How do you envision this offering? What sort of container will you hold it in? </label>
+<textarea className='long_form'
+ placeholder="We want to encourage facilitators to think expansively about their offerings, beyond a typical class or workshop, using Fractal as an opportunity to stretch your practice towards experimental ways of thinking and learning together. It’s cool/encouraged if it’s new for you too!- Container possibilities include: class // workshop // secret mission // ritual // field trip // play date // etc"
+ name="Container Type/Vision"  /> 
+
+ <br />
+ <label>Container Title + Summary</label>
+<textarea className='long_form' 
+name="Container Title & Summary"
+placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"
+ />
+
+<br />
+<label>What activities will you facilitate and will there be any culminating projects? </label>
+<textarea  
+className='long_form'
+name="What activities will you facilitate and will there be any culminating projects?"
+ placeholder="A share out, performance, a bracelet with your best friends name on it" />
+< br />
+
+
+<label>Resources // supplies you would need? Would you bring any supplies?</label>
+<textarea className='long_form'
+placeholder="Electricity, Projector, Craft stuff, GIANT paper, 2000 gummy worms? "
+name="supplies needed"  />
+
+<br />
+
+
+
+
+<label>Where would you like your activity to take place? Is there a specific day, or time of day, that would work best for your programming?</label>
+<input type="text" 
+ placeholder="Indoor, outdoor, near water, in the dark?? We expect to host a majority of programming on-site, but are interested in including offsite field trips as well!"
+ name="location / setting needs"  />
+
+
+
+//deadline oct 9
+
 <div id='long_form_resp'>
+
+
+
+<label>What is the ideal length of time to hold your container?</label>
+<input 
+type="text" 
+placeholder="We will organize daily programming based on facilitator submissions, but expect to have multiple activities occurring throughout each day "
+name="time length"  />
+<br />
+
+<label>Is your container scalable for groups of different sizes? Is there an ideal group size or any size parameters?</label>
+<textarea  className='long_form' 
+ placeholder="how many people we talking here?"name="size and scaleability"
+  />
+<br />
+
+<label>Are you interested / available in joining us for the full session?</label>
+<input className='long_form' 
+ type="text" 
+ placeholder="We expect to run Fractal as a group gathering from Friday, Nov 22-Monday, Nov 25. Please let us know if you are interested in joining for the full extent of programming."
+ name="staying the whole session?" />
+
+ <br />
+
+
+
 <label>Any internet links / portfolio / website / social media of your previous work you’d like to share?</label>
 <input placeholder="It's okay if not :)"name="website"
   />
@@ -92,68 +159,32 @@ name="email"
 name='Accomodations' 
 placeholder="Accommodations? Dietary restrictions? Allergies? Medical and Access support?"
  />
-
-
+<br />
 <label>What are some aspects of group gatherings that sparked inspiration and excitement for you that you would like to see integrated?</label>
 <textarea  className='long_form' name="things liked from other gatherings" 
 
 placeholder="Bulletin board for spontaneous activities, collective cooking and meal sharing, evening programming, community radio, secret message mailboxes etc."
  />
 
-<label>Container Title + Summary</label>
-<textarea className='long_form' 
-name="Container Title & Summary"
-placeholder="Example: 'Transverse Portals' A course on navigating through and around the physical and mental barriers utilized and imposed by the security state. Making openings is an ancient technology for summoning and inducing flows both material and spiritual. How might we change our orientation to the world if we understand the inherent flaws of systems that prioritize security over collective wellbeing? How might the physical skill of lockpicking provide epistemic models for affecting systemic change?"
- />
+ <br />
 
-<br />
+
+
+
+
+
+
+
+
+
 
 <label>Any thing else you'd like to share?</label>
 <textarea className='long_form' 
 name="ect" />
 
 
-<label>Container type? How do you envision this container offering?</label>
-<textarea className='long_form'
- placeholder="We want to encourage facilitators to think expansively about their offerings, beyond a typical class or workshop, using Fractal as an opportunity to stretch your practice towards experimental ways of thinking and learning together. It’s cool/encouraged if it’s new for you too!- Container possibilities include: class // workshop // secret mission // ritual // field trip // play date // etc"
- name="Container Type/Vision"  /> 
 
 <br />
-
-<label>What activities will you facilitate and will there be any culminating projects? </label>
-<textarea  
-className='long_form'
-name="What activities will you facilitate and will there be any culminating projects?"
- placeholder="A share out, performance, a bracelet with your best friends name on it" />
-
-
-<label>Resources // supplies you would need? Would you bring any supplies?</label>
-<textarea className='long_form'
-placeholder="Electricity, Projector, Craft stuff, GIANT paper, 2000 gummy worms? "
-name="supplies needed"  />
-
-<label>Location</label>
-<input type="text" 
- placeholder="Indoor, outdoor, near water, in the dark?? We expect to host a majority of programming on-site, but are interested in including offsite field trips as well!"
- name="location / setting needs"  />
-
-<label>What is the ideal length of time to hold your container?</label>
-<input 
-type="text" 
-placeholder="We will organize daily programming based on facilitator submissions, but expect to have multiple activities occurring throughout each day "
-name="time length"  />
-
-<label>Is your container scalable for groups of different sizes? Is there an ideal group size or any size parameters?</label>
-<textarea  className='long_form' 
- placeholder="how many people we talking here?"name="size and scaleability"
-  />
-
-
-<label>Are you interested / available in joining us for the full session?</label>
-<input className='long_form' 
- type="text" 
- placeholder="We expect to run Fractal as a group gathering from Friday, Nov 22-Monday, Nov 25. Please let us know if you are interested in joining for the full extent of programming."
- name="staying the whole session?" />
 
 
 </div>
