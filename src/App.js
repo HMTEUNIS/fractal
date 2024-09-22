@@ -9,18 +9,17 @@ import Part from './Part.tsx';
 import ProposeContainer from './ProposeContainer.js'
 
 
-function Home({i, setI}){
+function Home({i, setI, motion}){
   useEffect(() => { 
 setI(i+1)    
   }, [])
     
 
-console.log("i",i)
   return(
     <div id="home_page">
 
       <div>
-        { i > 1
+        { i > 1 || !motion
         
         
         ?
@@ -87,15 +86,22 @@ function Register(){
 }
   function App() {
    const [i, setI] =useState(0)
+   const [motion, setMotion] = useState(true)
     return (
       <div id='god'>
-        <Part />
+            {motion ?    <Part /> : <span style={{height: "103202"}} />}
+
+               <div onClick={()=>setMotion(!motion)}id="accessability_menu">
+               <span>{motion ? "disable" : "enable"}</span>
+        <span>animation</span>
+        </div>
       <div id="main_cont">
       <HashRouter basename="/">   
       
            <div id='top_bar'>
           <span id='page_title'>
-
+{motion ?
+<>
           <img className='old_logo_comp'src='https://media2.giphy.com/media/fwnnWvYviPiKt6ntai/giphy.gif' />
           <img className='old_logo_comp'src='https://media4.giphy.com/media/KZqzQhRNJNpaojzwXG/giphy.gif' />
           <img className='old_logo_comp'src='https://media1.giphy.com/media/j0jFCVOM5sPhIr5H9P/giphy.gif' />
@@ -103,23 +109,29 @@ function Register(){
           <img className='old_logo_comp'src='https://media4.giphy.com/media/eNRLJfZiILZweSXWwW/giphy.gif' />
           <img className='old_logo_comp'src='https://media1.giphy.com/media/j0jFCVOM5sPhIr5H9P/giphy.gif' />
           <img className='old_logo_comp'src='https://media2.giphy.com/media/LmT7v2LXaQoSIb27gm/giphy.gif' />
+</>
+:
+<span id='accessable_title'>F.R.A.C.T.A.L.</span>
+  }
 <br />
 <br />
+
 </span>
         <div id="top_nav">
         
-       <NavLink to='*'> <span>About</span> </NavLink >
+       <NavLink to=''> <span>About</span> </NavLink >
        <NavLink to='/news'> <span>News</span></NavLink>
        <NavLink to='/register'> <span>Logistics</span></NavLink>
 
       <NavLink to='/submit_class'> <span>Apply</span></NavLink>
         </div>
+ 
         </div>
    
    <div id='content_container'>
         <Routes>
-        <Route path="/" >
-          <Route index path="*" element={<Home i={i} setI={setI}/>} />
+        <Route path="" >
+          <Route index path="/#" element={<Home i={i} motion={motion} setI={setI}/>} />
           <Route path="/news" element={<News />} />
           <Route path="/submit_class" element={<ProposeContainer />} />
           <Route path="/register" element={<Register />} />
@@ -130,7 +142,6 @@ function Register(){
       </HashRouter>
 
       </div>
-
       </div>
     );
   }

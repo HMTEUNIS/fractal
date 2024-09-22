@@ -113,7 +113,6 @@ name="supplies needed"  />
 
 
 
-//deadline oct 9
 
 <div id='long_form_resp'>
 
@@ -184,6 +183,11 @@ name="ect" />
 
 
 
+<br />
+
+<label>Send us a link or meme thats funny</label>
+<input placeholder=":)"name="website"
+  />
 <br />
 
 
