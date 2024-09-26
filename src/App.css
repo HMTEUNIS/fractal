@@ -7,7 +7,7 @@
   margin-top: 10px;
 
 }
-#apply_to_teach button{
+.subbutton{
   cursor: pointer;
   height: 50px;
   width: 100px;
@@ -15,7 +15,19 @@
   font-size: larger;
 
 }
+.two_buttons_horizontal{
+  display:flex;
 
+}
+#or{
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+.registeration_link{
+  font-size: 30px;
+  flex-shrink: 3;
+}
 #accessability_menu:hover{
 background-color: black;
 color: white;
@@ -72,7 +84,7 @@ label{
 }
 textarea{
   resize: none;
-  height: 80px;
+  height: 200px;
 }
 
 #top_bar{
