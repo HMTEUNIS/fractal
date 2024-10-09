@@ -3,18 +3,17 @@ import * as ReactDOM from "react-dom/client";
 import { HashRouter , Routes, Route, NavLink } from 'react-router-dom';
 import {useState, createContext} from 'react'
 import React from 'react';
-import Part from './Part.tsx';
 import ProposeContainer from './ProposeContainer.js'
 import Home from './Home.js'
 import News from './News.js';
 import Register from './Register.js';
+import Fracs from './fracs.png'
   function App() {
    const [i, setI] =useState(0)
    const [motion, setMotion] = useState(true)
   const [email, setEmail] = useState('')
     return (
-      <div id='god'>
-            {motion ?    <Part /> : <span style={{height: "103202"}} />}
+      <div id='god' style={{backgroundImage: `url(${Fracs})`}}>
                <div onClick={()=>setMotion(!motion)}id="accessability_menu">
                <span>{motion ? "disable" : "enable"}</span>
         <span>animation</span>

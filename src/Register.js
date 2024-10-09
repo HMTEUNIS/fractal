@@ -73,7 +73,7 @@ useEffect(() => {
         
         <form onSubmit={createReservation}>
             <div>
-            <p>This Fall we are gathering in Tovaangar, so called Los Angeles, from November 22-25th.</p> 
+            <p>This Fall we are gathering in Tovaangar, so called Los Angeles, from November 22-24th.</p> 
     <p>Weaving together constellations of our beloved and brilliant friends, at the leading edges, in the shadowy undergrounds, fugitive cracks, and entangled middles, of art, ecology and technology (and more!), for a moment of shared inquiry, co-creation, nourishment and to stir up good trouble.</p>
         <p>In order for us to prepare we're asking you to register before hand. If you have already registered but are coming back to submit a class, please register again and make note of it in the bio section :)</p>
         <p>See you soon!</p>
