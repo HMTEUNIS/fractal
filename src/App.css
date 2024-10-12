@@ -233,7 +233,7 @@ font-size: large;
 
 
 #content_container p{
-  text-align: justify;
+  text-align: left;
   margin-top: 20px;
   line-height: 30px;
 }
