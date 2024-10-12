@@ -76,6 +76,7 @@ useEffect(() => {
             <p>This Fall we are gathering in Tovaangar, so called Los Angeles, from November 22-24th.</p> 
     <p>Weaving together constellations of our beloved and brilliant friends, at the leading edges, in the shadowy undergrounds, fugitive cracks, and entangled middles, of art, ecology and technology (and more!), for a moment of shared inquiry, co-creation, nourishment and to stir up good trouble.</p>
         <p>In order for us to prepare we're asking you to register before hand. If you have already registered but are coming back to submit a class, please register again and make note of it in the bio section :)</p>
+        <p>Program expenses will be around $100/person (food costs & space rental fees). We're working with a sliding scale model for accessibility. Please contribute based on your ability - if you have access to expendable income or generational wealth, consider sponsoring another attendee! Alternative contributions welcome as well (meal ingredient contributions, gift cards for materials, -  contact us for a detailed list of our needs!)</p>
         <p>See you soon!</p>
             </div>
              <div id='basic_info'>
